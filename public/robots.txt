@@ -1,0 +1,96 @@
+# Nivora Temizlik - robots.txt
+# https://www.nivoratemizlik.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# ── AI / LLM Crawlers (explicit allow) ────────────────────────
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft / Bing
+User-agent: bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta / Facebook
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Common Crawl (used by many LLMs)
+User-agent: CCBot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Sitemap
+Sitemap: https://www.nivoratemizlik.com/sitemap.xml
+
+# Host
+Host: https://www.nivoratemizlik.com
