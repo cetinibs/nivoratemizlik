@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/hizmetlerimiz`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/iletisim`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/yorumlar`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
   ]
 
   const landingPageUrls: MetadataRoute.Sitemap = landingPages.map((p) => ({

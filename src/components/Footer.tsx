@@ -77,6 +77,7 @@ export default function Footer() {
                 { href: '/istanbul-temizlik-sirketleri', label: 'İstanbul Temizlik Şirketleri' },
                 { href: '/ofis-temizlik-sirketi', label: 'Ofis Temizlik Şirketi' },
                 { href: '/ev-temizlik-firmalari', label: 'Ev Temizlik Firmaları' },
+                { href: '/yorumlar', label: 'Müşteri Yorumları' },
                 { href: '/blog', label: 'Blog' },
                 { href: '/iletisim', label: 'İletişim & Teklif' },
               ].map((l) => (
