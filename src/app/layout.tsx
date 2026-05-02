@@ -347,6 +347,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           data-key="Nu11tH6gyhtpUvYxefB1lw"
           async
         />
+
+        {/* Google Ads / gtag.js */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18133093554"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18133093554');
+            `,
+          }}
+        />
       </head>
       <body className="font-dm antialiased">
         <Header />
