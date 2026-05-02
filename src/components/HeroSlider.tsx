@@ -13,6 +13,14 @@ const slides = [
     src: '/images/slider2.png',
     alt: 'Nivora Temizlik - Konut ve villa temizlik hizmetleri',
   },
+  {
+    src: '/images/slider3.png',
+    alt: 'Nivora Temizlik - Dış cephe cam ve yüksek kat temizliği',
+  },
+  {
+    src: '/images/slider4.png',
+    alt: 'Nivora Temizlik - İnşaat sonrası ve şantiye temizliği',
+  },
 ]
 
 function ArrowRight() {
@@ -54,7 +62,7 @@ export default function HeroSlider() {
   return (
     <section className="relative overflow-hidden bg-navy-900" aria-label="Ana başlık slider">
       {/* Slides */}
-      <div className="relative w-full" style={{ aspectRatio: '1440/540' }}>
+      <div className="relative w-full h-[480px] sm:h-[520px] lg:h-[600px]">
         {slides.map((slide, i) => (
           <div
             key={slide.src}
