@@ -332,6 +332,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+
+        {/* Ahrefs Analytics */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="Nu11tH6gyhtpUvYxefB1lw"
+          async
+        />
       </head>
       <body className="font-dm antialiased">
         <Header />
