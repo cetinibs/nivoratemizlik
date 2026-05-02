@@ -62,7 +62,7 @@ export default function HeroSlider() {
   return (
     <section className="relative overflow-hidden bg-navy-900" aria-label="Ana başlık slider">
       {/* Slides */}
-      <div className="relative w-full h-[480px] sm:h-[520px] lg:h-[600px]">
+      <div className="relative w-full h-[640px] sm:h-[640px] lg:h-[600px]">
         {slides.map((slide, i) => (
           <div
             key={slide.src}
