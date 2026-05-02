@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { services } from '@/lib/services'
 import { blogPosts } from '@/lib/blog-posts'
+import { landingPages } from '@/lib/landing-pages'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.nivoratemizlik.com'
@@ -13,6 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/iletisim`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
   ]
+
+  const landingPageUrls: MetadataRoute.Sitemap = landingPages.map((p) => ({
+    url: `${base}/${p.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.95,
+  }))
 
   const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${base}/hizmetlerimiz/${s.slug}`,
@@ -28,5 +36,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...servicePages, ...blogPages]
+  return [...staticPages, ...landingPageUrls, ...servicePages, ...blogPages]
 }

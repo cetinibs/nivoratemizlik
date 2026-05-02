@@ -73,6 +73,10 @@ export default function Footer() {
                 { href: '/', label: 'Ana Sayfa' },
                 { href: '/hakkimizda', label: 'Hakkımızda' },
                 { href: '/hizmetlerimiz', label: 'Tüm Hizmetler' },
+                { href: '/kurumsal-temizlik-firmalari', label: 'Kurumsal Temizlik Firmaları' },
+                { href: '/istanbul-temizlik-sirketleri', label: 'İstanbul Temizlik Şirketleri' },
+                { href: '/ofis-temizlik-sirketi', label: 'Ofis Temizlik Şirketi' },
+                { href: '/ev-temizlik-firmalari', label: 'Ev Temizlik Firmaları' },
                 { href: '/blog', label: 'Blog' },
                 { href: '/iletisim', label: 'İletişim & Teklif' },
               ].map((l) => (
