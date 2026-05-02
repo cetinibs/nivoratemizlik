@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <rect width="180" height="180" rx="38" fill="#06B6D4"/>
+  <path d="M90 32L40 60v60l50 28 50-28V60L90 32z" fill="white" fill-opacity="0.96"/>
+  <text x="90" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="62" font-weight="700" fill="#06B6D4">N</text>
+</svg>
