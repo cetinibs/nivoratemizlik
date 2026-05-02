@@ -21,6 +21,10 @@ const slides = [
     src: '/images/slider4.png',
     alt: 'Nivora Temizlik - İnşaat sonrası ve şantiye temizliği',
   },
+  {
+    src: '/images/slider5.png',
+    alt: 'Nivora Temizlik - AVM ve plaza temizlik hizmetleri',
+  },
 ]
 
 function ArrowRight() {
