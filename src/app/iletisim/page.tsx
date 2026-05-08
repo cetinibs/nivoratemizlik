@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Breadcrumb from '@/components/Breadcrumb'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'İletişim — Ücretsiz Keşif ve Fiyat Teklifi',
@@ -65,123 +66,7 @@ export default function ContactPage() {
                 Aşağıdaki formu doldurun, en geç 2 saat içinde sizi arayalım.
               </p>
 
-              <form className="space-y-5" action="#" method="POST" aria-label="Teklif formu">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="name" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                      Ad Soyad *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      placeholder="Adınız ve soyadınız"
-                      className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                      Telefon *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      placeholder="05XX XXX XX XX"
-                      className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                    E-posta
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="ornek@sirket.com"
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                    İhtiyaç Duyduğunuz Hizmet *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all bg-white"
-                  >
-                    <option value="">Hizmet seçin</option>
-                    <option value="ofis">Ofis Temizliği</option>
-                    <option value="insaat">İnşaat Sonrası Temizlik</option>
-                    <option value="fabrika">Fabrika Temizliği</option>
-                    <option value="otel">Otel Temizliği</option>
-                    <option value="konut">Konut Temizliği</option>
-                    <option value="cam">Cam Temizliği</option>
-                    <option value="diger">Diğer</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="district" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                    İlçe / Bölge
-                  </label>
-                  <input
-                    type="text"
-                    id="district"
-                    name="district"
-                    placeholder="Örn: Kadıköy, Beşiktaş, Maslak..."
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="area" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                    Alan / Büyüklük (m²)
-                  </label>
-                  <input
-                    type="text"
-                    id="area"
-                    name="area"
-                    placeholder="Örn: 500 m² ofis, 3 katlı bina..."
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block font-dm text-sm font-medium text-slate-700 mb-1.5">
-                    Ek Bilgiler / Mesajınız
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="Özel talepleriniz, sıklık tercihleri, uygun zaman aralığı..."
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 font-dm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-primary-lg w-full justify-center"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                    <path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z" />
-                  </svg>
-                  Teklif Formu Gönder
-                </button>
-
-                <p className="font-dm text-slate-400 text-xs text-center">
-                  Bilgileriniz yalnızca teklif hazırlamak amacıyla kullanılır. Spam göndermeyiz.
-                </p>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Contact info */}

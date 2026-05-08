@@ -5,6 +5,22 @@ import { useState } from 'react'
 const message = encodeURIComponent('Merhaba! Temizlik hizmeti hakkında bilgi almak istiyorum.')
 const waLink = `https://wa.me/905528920118?text=${message}`
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
+function fireWAConversion() {
+  window.gtag?.('event', 'generate_lead', {
+    send_to: 'AW-18133093554',
+    value: 80,
+    currency: 'TRY',
+    event_category: 'whatsapp',
+    event_label: 'whatsapp_floating_button',
+  })
+}
+
 export default function WhatsAppButton() {
   const [open, setOpen] = useState(false)
 
@@ -58,6 +74,7 @@ export default function WhatsAppButton() {
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={fireWAConversion}
               className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#1db954] text-white font-semibold text-sm py-3 rounded-xl transition-colors"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
