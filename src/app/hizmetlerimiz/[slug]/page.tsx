@@ -21,11 +21,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: service.keywords,
     alternates: {
       canonical: `https://www.nivoratemizlik.com/hizmetlerimiz/${service.slug}`,
+      languages: {
+        'tr-TR': `https://www.nivoratemizlik.com/hizmetlerimiz/${service.slug}`,
+        'x-default': `https://www.nivoratemizlik.com/hizmetlerimiz/${service.slug}`,
+      },
     },
     openGraph: {
       title: `${service.title} | Nivora Temizlik`,
       description: service.description,
       url: `https://www.nivoratemizlik.com/hizmetlerimiz/${service.slug}`,
+      type: 'website',
+      images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: service.title }],
     },
   }
 }

@@ -4,10 +4,23 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { services, getServicesByCategory } from '@/lib/services'
 
 export const metadata: Metadata = {
-  title: 'Temizlik Hizmetleri İstanbul — Ofis, AVM, Hastane, Villa, Şantiye',
+  title: { absolute: 'Temizlik Hizmetleri İstanbul | Nivora Temizlik' },
   description:
-    "Nivora Temizlik olarak İstanbul'da ofis, AVM, hastane, okul, showroom, villa, yazlık, şantiye, fabrika, otel ve dış cephe cam temizliği hizmetleri sunuyoruz. Ücretsiz teklif alın!",
-  alternates: { canonical: 'https://www.nivoratemizlik.com/hizmetlerimiz' },
+    "İstanbul'da ofis, AVM, hastane, villa, şantiye ve fabrika temizliği. Kurumsal ve bireysel temizlik hizmetleri için ücretsiz teklif alın.",
+  alternates: {
+    canonical: 'https://www.nivoratemizlik.com/hizmetlerimiz',
+    languages: {
+      'tr-TR': 'https://www.nivoratemizlik.com/hizmetlerimiz',
+      'x-default': 'https://www.nivoratemizlik.com/hizmetlerimiz',
+    },
+  },
+  openGraph: {
+    title: 'Temizlik Hizmetleri İstanbul | Nivora Temizlik',
+    description: "İstanbul'da ofis, AVM, hastane, villa, şantiye ve fabrika temizliği. Kurumsal ve bireysel temizlik hizmetleri için ücretsiz teklif alın.",
+    url: 'https://www.nivoratemizlik.com/hizmetlerimiz',
+    type: 'website',
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik Hizmetleri' }],
+  },
 }
 
 function ArrowRight() {

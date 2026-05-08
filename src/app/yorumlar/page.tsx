@@ -4,9 +4,9 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { reviews, reviewStats, GOOGLE_REVIEW_URL, GOOGLE_BUSINESS_URL } from '@/lib/reviews'
 
 export const metadata: Metadata = {
-  title: 'Müşteri Yorumları & Referanslar',
+  title: { absolute: 'Müşteri Yorumları | Nivora Temizlik' },
   description:
-    "Nivora Temizlik müşteri yorumları, Google değerlendirmeleri ve referansları. 4.9/5 ortalama puan, 248+ doğrulanmış değerlendirme. İstanbul'un en iyi temizlik şirketi.",
+    "Nivora Temizlik müşteri yorumları ve Google değerlendirmeleri. 4.9/5 ortalama puan, 248+ doğrulanmış değerlendirme. İstanbul'un en iyi temizlik şirketi.",
   keywords: [
     'nivora temizlik yorumları',
     'nivora temizlik referansları',
@@ -15,12 +15,19 @@ export const metadata: Metadata = {
     'temizlik şirketi tavsiye',
     'en iyi temizlik şirketi yorum',
   ],
-  alternates: { canonical: 'https://www.nivoratemizlik.com/yorumlar' },
+  alternates: {
+    canonical: 'https://www.nivoratemizlik.com/yorumlar',
+    languages: {
+      'tr-TR': 'https://www.nivoratemizlik.com/yorumlar',
+      'x-default': 'https://www.nivoratemizlik.com/yorumlar',
+    },
+  },
   openGraph: {
     title: 'Müşteri Yorumları | Nivora Temizlik',
     description: '4.9/5 Google puanı, 248+ değerlendirme. Müşterilerimiz Nivora hakkında ne diyor?',
     url: 'https://www.nivoratemizlik.com/yorumlar',
     type: 'website',
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik Müşteri Yorumları' }],
   },
 }
 

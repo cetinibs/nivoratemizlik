@@ -83,13 +83,13 @@ export const metadata: Metadata = {
     title: 'Nivora Temizlik Hizmetleri | Kurumsal Temizlik İstanbul',
     description:
       "İstanbul'un lider kurumsal temizlik şirketi. Ofis, AVM, hastane, otel, fabrika, villa ve cam temizliğinde 10+ yıllık deneyim. Tüm 39 ilçede aktif.",
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Nivora Temizlik Hizmetleri' }],
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik Hizmetleri' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Nivora Temizlik Hizmetleri | Kurumsal Temizlik İstanbul',
     description: "İstanbul'un lider kurumsal temizlik şirketi.",
-    images: ['/og-image.jpg'],
+    images: ['/images/slider1.png'],
   },
   robots: {
     index: true,
@@ -162,11 +162,11 @@ const organizationSchema = {
   url: 'https://www.nivoratemizlik.com',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://www.nivoratemizlik.com/og-image.jpg',
+    url: 'https://www.nivoratemizlik.com/images/slider1.png',
     width: 1200,
-    height: 630,
+    height: 800,
   },
-  image: 'https://www.nivoratemizlik.com/og-image.jpg',
+  image: 'https://www.nivoratemizlik.com/images/slider1.png',
   description: "İstanbul'un lider kurumsal temizlik şirketi. 10+ yıl deneyim, 200+ uzman personel, 500+ müşteri.",
   foundingDate: '2014',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 200 },
@@ -234,7 +234,7 @@ const localBusinessSchema = {
   url: 'https://www.nivoratemizlik.com',
   telephone: '+905528920118',
   email: 'info@nivoratemizlik.com',
-  image: 'https://www.nivoratemizlik.com/og-image.jpg',
+  image: 'https://www.nivoratemizlik.com/images/slider1.png',
   logo: 'https://www.nivoratemizlik.com/og-image.jpg',
   priceRange: '₺₺',
   currenciesAccepted: 'TRY',
@@ -314,6 +314,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="tr-TR" className={`${cormorant.variable} ${dmSans.variable}`}>
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+
         {/* Geo & locale hints (also surfaced via metadata.other above) */}
         <meta name="geo.region" content="TR-34" />
         <meta name="geo.placename" content="İstanbul" />
@@ -323,9 +327,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" />
         <meta name="revisit-after" content="7 days" />
-        <link rel="alternate" hrefLang="tr-TR" href="https://www.nivoratemizlik.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.nivoratemizlik.com" />
-        <link rel="canonical" href="https://www.nivoratemizlik.com" />
 
         {/* Structured data: Organization + WebSite + LocalBusiness */}
         <script

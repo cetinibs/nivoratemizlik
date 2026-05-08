@@ -20,12 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.excerpt,
     alternates: {
       canonical: `https://www.nivoratemizlik.com/blog/${post.slug}`,
+      languages: {
+        'tr-TR': `https://www.nivoratemizlik.com/blog/${post.slug}`,
+        'x-default': `https://www.nivoratemizlik.com/blog/${post.slug}`,
+      },
     },
     openGraph: {
       title: `${post.title} | Nivora Temizlik`,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
+      url: `https://www.nivoratemizlik.com/blog/${post.slug}`,
+      images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: post.title }],
     },
   }
 }

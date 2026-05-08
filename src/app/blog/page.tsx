@@ -4,10 +4,23 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { blogPosts } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog — İstanbul Temizlik Rehberleri ve İpuçları',
+  title: { absolute: 'Blog | Temizlik Rehberleri — Nivora Temizlik' },
   description:
     "Kurumsal temizlik, ofis hijyeni, inşaat sonrası temizlik ve İstanbul ilçelerine özel temizlik rehberleri. Nivora Temizlik Blog.",
-  alternates: { canonical: 'https://www.nivoratemizlik.com/blog' },
+  alternates: {
+    canonical: 'https://www.nivoratemizlik.com/blog',
+    languages: {
+      'tr-TR': 'https://www.nivoratemizlik.com/blog',
+      'x-default': 'https://www.nivoratemizlik.com/blog',
+    },
+  },
+  openGraph: {
+    title: 'Blog | Temizlik Rehberleri — Nivora Temizlik',
+    description: "Kurumsal temizlik, ofis hijyeni, inşaat sonrası temizlik ve İstanbul ilçelerine özel temizlik rehberleri. Nivora Temizlik Blog.",
+    url: 'https://www.nivoratemizlik.com/blog',
+    type: 'website',
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik Blog' }],
+  },
 }
 
 function ArrowRight() {

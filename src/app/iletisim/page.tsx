@@ -2,10 +2,23 @@ import type { Metadata } from 'next'
 import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'İletişim — Ücretsiz Keşif ve Fiyat Teklifi',
+  title: { absolute: 'İletişim | Ücretsiz Teklif — Nivora Temizlik' },
   description:
-    "Nivora Temizlik ile iletişime geçin. İstanbul'da ücretsiz keşif ve temizlik hizmeti fiyat teklifi alın. Telefon: 0552 892 01 18",
-  alternates: { canonical: 'https://www.nivoratemizlik.com/iletisim' },
+    "Nivora Temizlik ile iletişime geçin. İstanbul'da ücretsiz keşif ve fiyat teklifi alın. 0552 892 01 18",
+  alternates: {
+    canonical: 'https://www.nivoratemizlik.com/iletisim',
+    languages: {
+      'tr-TR': 'https://www.nivoratemizlik.com/iletisim',
+      'x-default': 'https://www.nivoratemizlik.com/iletisim',
+    },
+  },
+  openGraph: {
+    title: 'İletişim | Ücretsiz Teklif — Nivora Temizlik',
+    description: "Nivora Temizlik ile iletişime geçin. İstanbul'da ücretsiz keşif ve fiyat teklifi alın. 0552 892 01 18",
+    url: 'https://www.nivoratemizlik.com/iletisim',
+    type: 'website',
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik İletişim' }],
+  },
 }
 
 const contactSchema = {

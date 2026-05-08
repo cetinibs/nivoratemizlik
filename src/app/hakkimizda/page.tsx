@@ -3,10 +3,23 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda — İstanbul\'un Güvenilir Temizlik Şirketi',
+  title: { absolute: 'Hakkımızda | Nivora Temizlik İstanbul' },
   description:
     "Nivora Temizlik, 2014'ten bu yana İstanbul'da kurumsal ve bireysel temizlik hizmeti sunmaktadır. Ekibimiz, sertifikalarımız ve misyonumuz hakkında bilgi edinin.",
-  alternates: { canonical: 'https://www.nivoratemizlik.com/hakkimizda' },
+  alternates: {
+    canonical: 'https://www.nivoratemizlik.com/hakkimizda',
+    languages: {
+      'tr-TR': 'https://www.nivoratemizlik.com/hakkimizda',
+      'x-default': 'https://www.nivoratemizlik.com/hakkimizda',
+    },
+  },
+  openGraph: {
+    title: 'Hakkımızda | Nivora Temizlik İstanbul',
+    description: "Nivora Temizlik, 2014'ten bu yana İstanbul'da kurumsal ve bireysel temizlik hizmeti sunmaktadır. Ekibimiz, sertifikalarımız ve misyonumuz hakkında bilgi edinin.",
+    url: 'https://www.nivoratemizlik.com/hakkimizda',
+    type: 'website',
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik Ekibi' }],
+  },
 }
 
 const milestones = [

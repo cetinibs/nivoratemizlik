@@ -4,10 +4,23 @@ import { services } from '@/lib/services'
 import HeroSlider from '@/components/HeroSlider'
 
 export const metadata: Metadata = {
-  title: 'Kurumsal Temizlik İstanbul | Nivora Temizlik',
+  title: { absolute: 'Kurumsal Temizlik İstanbul | Nivora Temizlik' },
   description:
-    "İstanbul'un en güvenilir kurumsal temizlik şirketi. Ofis, AVM, hastane, okul, villa, şantiye ve dış cephe cam temizliğinde 10+ yıllık deneyim. 500+ mutlu müşteri. Ücretsiz teklif alın!",
-  alternates: { canonical: 'https://www.nivoratemizlik.com' },
+    "İstanbul'un en güvenilir kurumsal temizlik şirketi. Ofis, AVM, hastane, okul, villa ve şantiye temizliğinde 10+ yıl deneyim. 500+ mutlu müşteri. Ücretsiz teklif alın!",
+  alternates: {
+    canonical: 'https://www.nivoratemizlik.com',
+    languages: {
+      'tr-TR': 'https://www.nivoratemizlik.com',
+      'x-default': 'https://www.nivoratemizlik.com',
+    },
+  },
+  openGraph: {
+    title: 'Kurumsal Temizlik İstanbul | Nivora Temizlik',
+    description: "İstanbul'un en güvenilir kurumsal temizlik şirketi. Ofis, AVM, hastane, okul, villa ve şantiye temizliğinde 10+ yıl deneyim. 500+ mutlu müşteri.",
+    url: 'https://www.nivoratemizlik.com',
+    type: 'website',
+    images: [{ url: '/images/slider1.png', width: 1200, height: 800, alt: 'Nivora Temizlik — Kurumsal Temizlik İstanbul' }],
+  },
 }
 
 /* ── Icons ─────────────────────────────────────────────────────── */
