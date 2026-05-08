@@ -360,7 +360,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-18133093554');
+              gtag('config', 'AW-18133093554', {
+                allow_enhanced_conversions: true,
+                phone_conversion_number: '+905528920118'
+              });
+            `,
+          }}
+        />
+
+        {/* Global telefon tıklaması conversion tracking */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('click', function(e) {
+                var el = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+                if (el && window.gtag) {
+                  gtag('event', 'conversion', {
+                    send_to: 'AW-18133093554/-mxZCITW2akcELKZxMZD',
+                    value: 100,
+                    currency: 'TRY',
+                    event_label: 'phone_click_global'
+                  });
+                }
+              });
             `,
           }}
         />

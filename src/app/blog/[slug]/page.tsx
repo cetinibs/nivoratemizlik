@@ -173,8 +173,8 @@ export default function BlogPostPage({ params }: Props) {
                 <Link href="/iletisim" className="btn-primary w-full justify-center mb-3">
                   Teklif İste
                 </Link>
-                <a href="tel:+908501234567" className="block text-center font-dm text-slate-500 text-sm hover:text-navy-900 transition-colors">
-                  0850 123 45 67
+                <a href="tel:+905528920118" className="block text-center font-dm text-slate-500 text-sm hover:text-navy-900 transition-colors">
+                  0552 892 01 18
                 </a>
               </div>
 
