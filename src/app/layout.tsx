@@ -374,11 +374,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               document.addEventListener('click', function(e) {
                 var el = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
                 if (el && window.gtag) {
-                  gtag('event', 'generate_lead', {
-                    send_to: 'AW-18133093554',
+                  gtag('event', 'conversion', {
+                    send_to: 'AW-18133093554/-mxZCITW2akcELKZxMZD',
                     value: 100,
                     currency: 'TRY',
-                    event_category: 'phone',
                     event_label: 'phone_click_global'
                   });
                 }

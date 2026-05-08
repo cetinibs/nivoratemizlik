@@ -12,11 +12,10 @@ declare global {
 }
 
 function fireWAConversion() {
-  window.gtag?.('event', 'generate_lead', {
-    send_to: 'AW-18133093554',
+  window.gtag?.('event', 'conversion', {
+    send_to: 'AW-18133093554/-mxZCITW2akcELKZxMZD',
     value: 80,
     currency: 'TRY',
-    event_category: 'whatsapp',
     event_label: 'whatsapp_floating_button',
   })
 }

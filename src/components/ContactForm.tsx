@@ -8,32 +8,31 @@ declare global {
   }
 }
 
+const CONVERSION_ID = 'AW-18133093554/-mxZCITW2akcELKZxMZD'
+
 function fireLeadConversion(label: string, value: number) {
-  window.gtag?.('event', 'generate_lead', {
-    send_to: 'AW-18133093554',
+  window.gtag?.('event', 'conversion', {
+    send_to: CONVERSION_ID,
     value,
     currency: 'TRY',
-    event_category: 'lead',
     event_label: label,
   })
 }
 
 function firePhoneConversion() {
-  window.gtag?.('event', 'generate_lead', {
-    send_to: 'AW-18133093554',
+  window.gtag?.('event', 'conversion', {
+    send_to: CONVERSION_ID,
     value: 100,
     currency: 'TRY',
-    event_category: 'phone',
     event_label: 'phone_click_contact_page',
   })
 }
 
 function fireWAConversion() {
-  window.gtag?.('event', 'generate_lead', {
-    send_to: 'AW-18133093554',
+  window.gtag?.('event', 'conversion', {
+    send_to: CONVERSION_ID,
     value: 80,
     currency: 'TRY',
-    event_category: 'whatsapp',
     event_label: 'whatsapp_contact_page',
   })
 }
